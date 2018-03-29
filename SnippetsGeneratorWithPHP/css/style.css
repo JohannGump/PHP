@@ -1,0 +1,265 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: fuchsia;
+}
+
+body{
+    width: 100%;
+    /*    height: 1000px;*/
+    background-color: white;
+}
+
+/*
+IDS MACRO STRUCTURES
+*/
+#header{
+    height: 50px;
+    width: 100%;
+    background: dimgray;
+    color: white;
+    padding: 10px;
+    font-family: arial;
+}
+
+/*#header h1{
+    height: 100px;
+    width: 100%;
+    background: dimgray;
+    color: white;
+    padding: 10px;
+    font-family: arial;
+}*/
+
+#nav{
+    width: 15%;
+    background: silver;
+    color: black;
+    padding: 5px;
+    /*    border-top: 1px solid dimgray;*/
+    /*    border-bottom: 1px solid dimgray;*/
+    border-left: 1px solid dimgray;
+    border-right: 1px solid dimgray;
+    font-family: arial;
+    font-size: x-small;
+    float: left;
+
+    /*    position: fixed;
+        left: 0px;
+        top: 170px;*/
+}
+
+#nav ul li{
+    /*    line-height: 30px;*/
+    list-style-type: none;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+#centre{
+    padding: 1%;
+    float: left;
+    width: 80%;
+}
+
+#footer{
+    clear: both;
+    background: dimgray;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid dimgray;
+    /*    position: fixed;
+        top: 700px;
+        height: 50px;
+        line-height: 50px;*/
+}
+
+#lblMessage{
+    clear: both;
+}
+
+ul li{
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+/*
+ELEMENTS
+*/
+
+p{
+    margin: 0.3em;
+}
+
+img{
+    margin:0;
+    padding: 0;
+    border: 0;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 1em;
+}
+caption, th, td{
+    border: 0px solid black;
+}
+td, th{
+    padding: 5px;
+}
+
+fieldset{
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+legend{
+    padding: 0.5em;
+}
+
+form{
+    margin: 1em;
+}
+
+textarea{
+    color: dimgray;
+}
+
+button[type="submit"]{
+    display: block;
+    padding: 0.5em;
+    /*    border-radius: 5px;*/
+    background-color: black;
+    color: white;
+    width: 200px;
+}
+
+input[type="text"]{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-style: italic;
+    color: dimgray;
+}
+
+input[type="password"]{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-style: italic;
+    color: dimgray;
+}
+
+input[type="submit"]{
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: dimgray;
+    color: white;
+    width: 200px;
+}
+
+input[type="reset"]{
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+
+input[type="button"]{
+    padding: 0.5em;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    width: 200px;
+}
+
+a{
+    text-decoration: none;
+    color: dimgray;
+}
+
+select{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-style: italic;
+    color: dimgray;
+    width: 200px;
+}
+
+/*
+IDS
+*/
+
+#bds, #tables, #colonnes{
+    width: 300px;
+    float: left;
+}
+
+#erreur{
+    color: red;
+}
+
+#texte{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#lblMessage{
+    display: block;
+    margin-top: 1em;
+    margin-left: 5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*
+CLASSES
+*/
+.etiquette{
+
+}
+
+.centre{
+    text-align: center;
+}
+
+.rouge{
+    background-color: red;
+}
+
+.texteRouge{
+    color: red;
+}
+
+.texteVert{
+    color: yellowgreen;
+}
+
+
+.icone{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nettoyeur{
+    clear: both;
+}

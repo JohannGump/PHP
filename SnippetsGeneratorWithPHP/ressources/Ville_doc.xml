@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding='UTF-8' standalone='yes' ?>
+<root>
+<record>
+<idVille>
+1
+</idVille>
+<nomVille>
+Paris 11
+</nomVille>
+<cp>
+75011
+</cp>
+</record>
+<record>
+<idVille>
+2
+</idVille>
+<nomVille>
+Paris 12
+</nomVille>
+<cp>
+75012
+</cp>
+</record>
+<record>
+<idVille>
+3
+</idVille>
+<nomVille>
+Créteil
+</nomVille>
+<cp>
+94000
+</cp>
+</record>
+<record>
+<idVille>
+25
+</idVille>
+<nomVille>
+P22
+</nomVille>
+<cp>
+75022
+</cp>
+</record>
+</root>

@@ -1,0 +1,76 @@
+-- PS TP
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS `cours`.`clientsAuthentification`$$
+CREATE PROCEDURE  `cours`.`clientsAuthentification`(asNom VARCHAR(50), adDatenaissance DATE)
+BEGIN
+  SELECT * FROM clients WHERE nom = asNom AND date_naissance = adDatenaissance;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`clientsDeleteOne`$$
+CREATE PROCEDURE  `cours`.`clientsDeleteOne`(aiIdClient int)
+BEGIN
+  DELETE FROM clients WHERE id_client = aiIdClient;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`clientsInsertOne`$$
+CREATE PROCEDURE  `cours`.`clientsInsertOne`(aiIdClient INT, asNom VARCHAR(50), asPrenom VARCHAR(50), adDateNaissance DATE, asAdresse VARCHAR(50), asCP CHAR(5))
+BEGIN
+  INSERT INTO clients(id_client,nom,prenom,date_naissance,adresse,cp) VALUES(aiIdClient, asNom, asPrenom, adDateNaissance, asAdresse, asCP);
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`clientsSelectOne`$$
+CREATE PROCEDURE  `cours`.`clientsSelectOne`(aiIdClient int)
+BEGIN
+  SELECT * FROM clients WHERE id_client = aiIdClient;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`clientsUpdateOne`$$
+CREATE PROCEDURE  `cours`.`clientsUpdateOne`(aiIdClient INT, asNom VARCHAR(50), asPrenom VARCHAR(50), adDateNaissance DATE, asAdresse VARCHAR(50), asCP CHAR(5))
+BEGIN
+  UPDATE clients SET nom=asNom, prenom=asPrenom, date_naissance=adDateNaissance, adresse=asAdresse, cp=asCP WHERE id_client=aiIdClient;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`produitsSelectAll`$$
+CREATE PROCEDURE  `cours`.`produitsSelectAll`()
+BEGIN
+  SELECT * FROM produits ORDER BY designation;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`produitsSelectFew`$$
+CREATE PROCEDURE  `cours`.`produitsSelectFew`(asIdsProduits VARCHAR(50))
+BEGIN
+  SELECT * FROM produits WHERE id_produit IN(asIdsProduits) ORDER BY designation;
+END $$
+
+
+DROP PROCEDURE IF EXISTS `cours`.`produitsSelectOne`$$
+CREATE PROCEDURE  `cours`.`produitsSelectOne`(aiIdProduit int)
+BEGIN
+  SELECT * FROM produits WHERE id_produit = aiIdProduit;
+END $$
+
+DELIMITER ;
+
+
+-- TESTS PS 
+
+
+CALL produitsSelectAll();
+CALL produitsSelectOne(1);
+CALL produitsSelectFew('1,5');
+
+SELECT * FROM clients c;
+CALL clientsSelectOne(1);
+CALL clientsDeleteOne(101);
+CALL clientsAuthentification('Buguet','1955-10-03');
+
+CALL clientsInsertOne(101, 'Dalmatien', 'petit', '1930-08-28', 'Rue des chats', '75011');
+
+CALL clientsUpdateOne(101, 'Dalmatien', 'grand', '1930-08-28', 'Rue des chats', '75012');

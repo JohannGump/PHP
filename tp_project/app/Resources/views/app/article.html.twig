@@ -1,0 +1,9 @@
+{% block body %}
+
+    <div style="border:1px solid;">
+        <p style="font-weight:bold;">Titre de l'article : {{ article.nom }} </p>
+        <p style="font-weight:bold;">{{ article.prix }} $</p>
+        <p>{{ article.description | raw }}</p>
+        <p>{{ article.createdAt | date('d/m/Y') }} - {{ article.stock }}</p>
+    </div>
+{% endblock %}

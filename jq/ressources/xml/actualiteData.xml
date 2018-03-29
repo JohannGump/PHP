@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+actualiteData.xml
+-->
+<root>
+    <actualite id="1" titre="Promotion du mois" soustitre="-30 %" texte="Tous les jeudis de 19 heures à 21 heures" photo="promo.jpg" />
+</root>

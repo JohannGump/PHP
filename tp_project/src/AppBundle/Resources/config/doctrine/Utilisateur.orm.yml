@@ -1,0 +1,43 @@
+AppBundle\Entity\Utilisateur:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UtilisateurRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        createdAt:
+            type: datetime
+        email:
+            type: string
+            length: '255'
+        nom:
+            type: string
+            length: '255'
+        prenom:
+            type: string
+            length: '255'
+        codePostal:
+            type: integer
+            column: code_postal
+        telephone:
+            type: integer
+        username:
+            type: string
+            length: '255'
+        password:
+            type: string
+            length: '255'
+
+    # lier deux entités : ici article est lié à commentaire
+    # et un article peut avoir plusieurs commentaires
+    oneToMany:
+        commandes:
+            targetEntity: Commande
+            mappedBy: utilisateur
+            cascade: ['all']
+
+    lifecycleCallbacks: {  }

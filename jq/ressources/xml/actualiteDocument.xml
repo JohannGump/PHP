@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+actualiteDocument.xml
+-->
+<root>
+    <actualite>
+        <id>1</id>
+        <titre>Promotion du mois</titre>
+        <soustitre>-30 %</soustitre>
+        <texte>Tous les jeudis de 19 heures à 21 heures</texte>
+        <photo>promo.jpg</photo>
+    </actualite>
+</root>

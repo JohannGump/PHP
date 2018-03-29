@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    {% endblock %}
+</head>
+
+<body>
+
+    {% block nav %}
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">MonSexShop</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="{{ path ('article_creation') }}">Création article</a></li>
+                    <li><a href="{{ path ('utilisateur_creation') }}">Inscription</a></li>
+                    <li><a href="#">Validation commande</a></li>
+                </ul>
+            </div>
+        </nav>
+    {% endblock %}
+
+
+
+{% block body %}
+
+    <h1>Articles du plaisir</h1>
+
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">titre de l'article</th>
+            <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for art in articles %}
+        <tr class="table-active">
+
+            <td>{{ art.id }}</td>
+            <td>{{ art.nom }}</td>
+            <td>{{ art.description }}</td>
+            <td>
+
+                <a href="{{ path ('ajout_panier',{'id':art.id}) }}"><button type="button" class="btn btn-success">ajouter au panier</button></a>
+                <a href="{{ path ('article_display',{'id':art.id}) }}"><button type="button" class="btn btn-info" >voir le détail</button></a>
+                <a href="{{ path ('article_delete',{'id':art.id}) }}"><button type="button" class="btn btn-danger">Supprimer</button></a>
+            </td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+
+{% endblock %}
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

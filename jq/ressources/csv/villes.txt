@@ -1,0 +1,11 @@
+cp;nom_ville;id_pays;nom_pays
+13000;Marseille;33;France
+33000;Bordeaux;33;France
+59000;Lille;33;France
+75011;Paris XI;33;France
+75012;Paris XII;33;France
+99100;Rome;39;Italie
+99101;Milan;39;Italie
+99200;Madrid;34;Espagne
+
+
